@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link  rel="icon" type="x-icon/favicon" href="https://meups.com.br/wp-content/uploads/2023/03/Like-a-Dragon-8-Yakuza.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+
+    <title>IMC - Corporal Mass Calculator</title>
+</head>
+<body>
+    <h1> Índice de Massa Corporal</h1>
+    
+    <div class="calculator">
+
+        <label for="altura">Altura</label>
+        <input type="number" name="" id="altura">
+        <br>
+    
+        <label for="peso">Peso (Kg):</label>
+        <input type="number" name="" id="peso">
+        <br>
+    
+        <button onclick="calcularIMC()">Calcular</button>
+    
+        <p>Seu índice de massa corporal é: <br><span id="resultado"></span>
+            <br>
+        </p>
+    
+        <img src="bajima-balaospeak.png" alt="Tabela massa corporal">
+    </div>
+
+        <script>
+            function calcularIMC(){
+                const altura = document.getElementById('altura').value;
+                const peso = document.getElementById('peso').value;
+                const imc = peso / (altura ** 2);
+                
+                document.getElementById('resultado').textContent = imc.toFixed(2);
+            }
+    
+        </script>
+    
+</body>
+
+
+<footer> Developed by Guilherme Reis | Feb 2024 | Made in about 20 minutes |</footer>
+</html>
